@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculater</title>
+    <style>
+     h1{
+        color: red;
+        text-align: center;
+     }
+
+     #ok{
+      text-align: center;
+     }
+
+     #all{
+      text-align: center;
+      
+     }
+    </style>
+   
+</head>
+<body>
+    <h1 >
+        Mini Calculater
+    </h1>
+       <div id="ok">
+        <input id="plus1" type="number" placeholder="Enter 1st number">
+        <input id="plus2" type="number" placeholder="Enter 2st number">
+     </div>
+    <hr>
+        <div id="all">
+        <button id="add">ADD </button>
+        <button id="subs">SUBSTRACT </button>
+        <button id="multi">MULTIPLY </button>
+        <button id="divide">DIVIDE </button>
+        </div>
+
+</body>
+</html>
+<script>
+  let input1=document.getElementById("plus1");
+  let input2=document.getElementById("plus2");
+   
+  let output =document.querySelectorAll("#all>button");
+
+  let total=0;
+
+  for(let i=0;i<output.length;i++){
+    output[i].addEventListener('click',function(){
+      switch(output[i].innerText){
+       case "ADD":
+        total=Number(input1.value)+Number(input2.value);
+        alert(total);
+        return;
+
+        case "SUBSTRACT":
+        total=Number(input1.value)-Number(input2.value);
+        alert(total);
+        return;
+
+        case "MULTIPLY":
+        total=Number(input1.value)*Number(input2.value);
+        alert(total);
+        return;
+
+        case "DIVIDE":
+        total=Number(input1.value)/Number(input2.value);
+        alert(total);
+        return;
+
+      }
+    })
+  }
+  
+ 
+</script>
